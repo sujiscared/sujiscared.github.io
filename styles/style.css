@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+/* Global Styling */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400; /* Thinner text globally */
+  overflow-y: auto;
+}
+
+/* Centering Content */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Typing Effect + Blinking Cursor */
+#centered {
+  font-size: 24px;
+  font-weight: 500; /* Thinner than bold */
+  text-align: center;
+  white-space: nowrap;
+}
+
+#centered::after {
+  content: "|";
+  font-weight: 500;
+  display: inline-block;
+  width: 10px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Social Links */
+#links {
+  color: #9a9a9a;
+  font-size: 16px;
+  text-align: center;
+}
+
+#links a {
+  text-decoration: none;
+  color: #9a9a9a;
+  font-weight: 500; /* Slightly thinner links */
+  transition: color 0.3s ease;
+}
+
+#links a:hover {
+  color: #ace1a3;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* Navigation Bar - Top Right */
+#navbar {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #9a9a9a;
+  font-weight: 500; /* Less bold navigation */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ace1a3;
+}
+
+/* Patreon Button */
+#patreon-btn {
+  display: inline-block;
+  background-color: #f96854;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-left: 15px;
+}
+
+#patreon-btn:hover {
+  background-color: #e15747;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  #navbar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  #centered {
+    font-size: 24px;
+    font-weight: 400; /* Thinner for mobile */
+  }
+
+  div {
+    margin-bottom: 24px;
+  }
+}
