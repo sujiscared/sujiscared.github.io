@@ -12,22 +12,21 @@ body {
   background-color: white;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
-  font-weight: 400; /* Thinner text globally */
-  overflow-y: auto;
+  font-weight: 400;
+  overflow-x: hidden;
 }
 
-/* Centering Content */
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* Responsive Wrapper */
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Typing Effect + Blinking Cursor */
 #centered {
   font-size: 24px;
-  font-weight: 500; /* Thinner than bold */
+  font-weight: 500;
   text-align: center;
   white-space: nowrap;
 }
@@ -51,18 +50,18 @@ body {
   color: #9a9a9a;
   font-size: 16px;
   text-align: center;
+  padding: 10px 0;
 }
 
 #links a {
   text-decoration: none;
   color: #9a9a9a;
-  font-weight: 500; /* Slightly thinner links */
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 #links a:hover {
   color: #ace1a3;
-  font-weight: 500;
   text-decoration: underline;
 }
 
@@ -77,12 +76,13 @@ body {
   background: rgba(255, 255, 255, 0.6);
   padding: 10px 15px;
   border-radius: 10px;
+  z-index: 1000;
 }
 
 .nav-link {
   text-decoration: none;
   color: #9a9a9a;
-  font-weight: 500; /* Less bold navigation */
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
@@ -108,23 +108,50 @@ body {
   background-color: #e15747;
 }
 
+/* Service Sections */
+.service-category {
+  margin-bottom: 40px;
+}
+
+.service-category p,
+.service-category h2,
+.service-category h3 {
+  margin: 10px 0;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-top: 5px;
+}
+
 /* Mobile Responsive Styling */
 @media (max-width: 768px) {
-  body {
+  html {
     font-size: 16px;
   }
 
   #navbar {
-    position: fixed;
-    top: 10px;
-    right: 10px;
+    flex-direction: column;
+    align-items: flex-end;
     font-size: 14px;
     padding: 8px 10px;
+    gap: 8px;
   }
 
   #centered {
-    font-size: 24px;
-    font-weight: 400; /* Thinner for mobile */
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .content-wrapper {
+    padding: 16px;
   }
 
   div {
