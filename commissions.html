@@ -1,62 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SUJi ° | Commissions</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="myfavicon.ico" />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <header>
-      <nav id="navbar">
-        <a href="index.html" class="nav-link">home</a>
-        <a href="commissions.html" class="nav-link">commissions</a>
-      </nav>
-    </header>
-
-    <!-- Responsive Content Wrapper -->
-    <div class="content-wrapper">
-      <main id="commissions">
-        <h1>Commissions</h1>
-
-        <div class="service-category">
-          <h2>🎚 Mixing + Mastering</h2>
-          <p><em>͞ status: selective availability</em></p>
-
-          <h3>Prices:</h3>
-          <p>
-            <strong>⸋ 2-Track Mix + Master</strong> – Full mix and master for vocals + instrumental<br />
-            (does not include tuning & timing)<br />
-            <span class="price">125 USD per song</span>
-          </p>
-          <p>
-            <strong>⸋ Full Mix + Master</strong> – Complete mix and master (any style/genre) including final masters + stems<br />
-            <span class="price">350 USD per song</span> (negotiable for EP/larger projects)
-          </p>
-        </div>
-
-        <div class="service-category">
-          <h2>🎼 Production + Sound Design</h2>
-          <p><em>͞ status: selective availability, contact for info</em></p>
-
-          <p>
-            <strong>⸋ Original Instrumental / Song</strong> – Custom-composed music tailored to your needs<br />
-            <span class="price">Custom pricing (contact for details)</span>
-          </p>
-          <p>
-            <strong>⸋ Sound Design</strong> – Custom sound effects, textures, and audio assets<br />
-            <span class="price">Custom pricing (contact for details)</span>
-          </p>
-          <p>
-            <strong>⸋ Background Music (BGM)</strong> – Original compositions for games, videos, or other projects<br />
-            <span class="price">Custom pricing (contact for details)</span>
-          </p>
-        </div>
-      </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>suji | commissions</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="myfavicon.ico" />
+</head>
+<body>
+  <nav id="navbar">
+    <a href="index.html" class="nav-link">home</a>
+    <a href="commissions.html" class="nav-link active">commissions</a>
+  </nav>
+  <div class="content-wrapper">
+    <h1 class="page-title">commissions</h1>
+    
+    <div class="section">
+      <h2>mixing + mastering <a href="#">portfolio</a></h2>
+      <div class="subtle">status: <span class="status-open">open</span></div>
+      <ul>
+        <li>2-track mix + master <span class="subtle">(full mix/master for vocals + instrumental, no tuning & timing)</span> <strong class="price">$125/song</strong></li>
+        <li>full mix + master <span class="subtle">(any style/genre, incl. final master & stems)</span> <strong class="price">$350/song</strong> <span class="subtle">(negotiable for EP/projects)</span></li>
+        <li>all prices are negotiable based on scope, complexity, and demand</li>
+      </ul>
+      <div class="subtle">contact for details!</div>
     </div>
 
-    <script src="js/script.js"></script>
-  </body>
+    <div class="section">
+      <h2>production + sound design</h2>
+      <div class="subtle status-selective">selective availability, contact for info</div>
+      <ul>
+        <li>original instrumental / song <span class="subtle">(custom-composed music)</span> <strong class="price">custom pricing</strong></li>
+        <li>sound design <span class="subtle">(custom effects, textures, audio assets)</span> <strong class="price">custom pricing</strong></li>
+        <li>background music (BGM) <span class="subtle">(for games, videos, etc.)</span> <strong class="price">custom pricing</strong></li>
+      </ul>
+      <div class="subtle">contact for details!</div>
+    </div>
+  </div>
+</body>
 </html>
