@@ -3,34 +3,84 @@
   src: url(../fonts/Poppins-Regular.ttf) format("truetype");
 }
 
-/* Global Styling */
-html,
-body {
-  height: 100%;
+html, body {
+  background: #fff;
+  color: #232323;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 400;
   margin: 0;
   padding: 0;
-  background-color: white;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  letter-spacing: 0.01em;
+  height: 100%;
   overflow-x: hidden;
 }
 
-/* Responsive Wrapper */
-.content-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+/* Navigation Bar - Top Right */
+#navbar {
+  position: fixed;
+  top: 24px;
+  right: 36px;
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  background: none;
+  padding: 0;
+  z-index: 1000;
+}
+
+/* Neon green nav link styling */
+.nav-link {
+  color: #888;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.nav-link.active,
+.nav-link:hover,
+.nav-link:focus {
+  color: #ace1a3;
+  outline: none;
+}
+
+/* Homepage only: Center the intro block vertically and horizontally */
+.homepage .content-wrapper {
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.homepage .main-center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.homepage #centered,
+.homepage .star-sep,
+.homepage .star-footer,
+.homepage #links {
+  text-align: center;
+  width: 100%;
 }
 
 /* Typing Effect + Blinking Cursor */
 #centered {
-  font-size: 24px;
+  font-size: 1.35em;
   font-weight: 500;
-  text-align: center;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
   white-space: nowrap;
 }
-
 #centered::after {
   content: "|";
   font-weight: 500;
@@ -38,59 +88,127 @@ body {
   width: 10px;
   animation: blink 0.8s infinite;
 }
-
 @keyframes blink {
-  50% {
-    opacity: 0;
-  }
+  50% { opacity: 0; }
+}
+
+/* Star dividers */
+.star-sep, .star-footer {
+  font-size: 1.15em;
+  color: #bbb;
+  margin: 12px 0 8px 0;
 }
 
 /* Social Links */
 #links {
-  color: #9a9a9a;
-  font-size: 16px;
-  text-align: center;
-  padding: 10px 0;
+  color: #888;
+  font-size: 1em;
+  text-align: left;
+  padding: 8px 0 0 0;
+  margin: 2px 0 0 0;
+  letter-spacing: 0.05em;
 }
-
+.homepage #links {
+  text-align: center;
+}
 #links a {
   text-decoration: none;
-  color: #9a9a9a;
+  color: #888;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.2s;
+  padding: 0 2px;
 }
-
-#links a:hover {
+#links a:hover,
+#links a:focus,
+#links a:active {
   color: #ace1a3;
   text-decoration: underline;
+  outline: none;
 }
 
-/* Navigation Bar - Top Right */
-#navbar {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  display: flex;
-  gap: 15px;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.6);
-  padding: 10px 15px;
-  border-radius: 10px;
-  z-index: 1000;
+/* Optionally: All site-wide links neon green on click/focus */
+a:active,
+a:focus {
+  color: #ace1a3 !important;
+  outline: none;
 }
 
-.nav-link {
-  text-decoration: none;
-  color: #9a9a9a;
+/* Content Wrapper (for all other pages: commissions, about, etc.) */
+.content-wrapper {
+  max-width: 430px;
+  margin: 95px 0 0 54px;
+  padding: 0 16px;
+  text-align: left;
+}
+
+/* Section Styling (for commissions/about) */
+.section {
+  margin-bottom: 44px;
+  padding-bottom: 16px;
+  border-bottom: 1px dotted #eee;
+}
+
+.page-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 32px;
+}
+
+h1, h2, h3 {
   font-weight: 500;
-  transition: color 0.3s ease;
+  margin: 24px 0 10px 0;
+  letter-spacing: 0.03em;
+}
+h1 { font-size: 1.4em; }
+h2 { font-size: 1.1em; display: inline-block; }
+h3 { font-size: 1.03em; }
+
+/* Commissions/Info List */
+ul {
+  padding-left: 18px;
+  margin: 12px 0;
+}
+li {
+  margin-bottom: 8px;
+  font-size: 1em;
 }
 
-.nav-link:hover {
-  color: #ace1a3;
+/* Subtle text, price and status */
+.subtle {
+  color: #8e8e8e;
+  font-size: 0.97em;
+}
+.price {
+  color: #1bc47d;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.status-open {
+  color: #1bc47d;
+  font-weight: 600;
+}
+.status-selective {
+  color: #ffb300;
+  font-weight: 600;
 }
 
-/* Patreon Button */
+/* Service Sections (for commissions.html) */
+.service-category, .bio {
+  margin-bottom: 40px;
+}
+
+.service-category p,
+.service-category h2,
+.service-category h3,
+.bio div,
+.bio p {
+  margin: 10px 0;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+/* Patreon Button (if you use it) */
 #patreon-btn {
   display: inline-block;
   background-color: #f96854;
@@ -103,58 +221,37 @@ body {
   transition: background-color 0.3s ease;
   margin-left: 15px;
 }
-
 #patreon-btn:hover {
   background-color: #e15747;
 }
 
-/* Service Sections */
-.service-category {
-  margin-bottom: 40px;
-}
-
-.service-category p,
-.service-category h2,
-.service-category h3 {
-  margin: 10px 0;
-  line-height: 1.6;
-  word-wrap: break-word;
-}
-
-.price {
-  font-weight: bold;
-  color: #333;
-  display: block;
-  margin-top: 5px;
-}
-
-/* Mobile Responsive Styling */
-@media (max-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-
-  #navbar {
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 14px;
-    padding: 8px 10px;
-    gap: 8px;
-  }
-
-  #centered {
-    font-size: 20px;
-    font-weight: 400;
-    padding: 10px;
-    white-space: normal;
-    word-break: break-word;
-  }
-
+/* Responsive for mobile */
+@media (max-width: 700px) {
   .content-wrapper {
-    padding: 16px;
+    margin: 70px 0 0 0;
+    max-width: 98vw;
+    padding: 0 4vw;
   }
-
-  div {
-    margin-bottom: 24px;
+  #navbar {
+    position: static;
+    justify-content: flex-end;
+    margin-bottom: 18px;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    gap: 11px;
+  }
+  #centered {
+    font-size: 1.1em;
+    padding: 0 0 4px 0;
+  }
+  #links {
+    font-size: 0.99em;
+  }
+  .homepage .content-wrapper {
+    margin: 0;
+    max-width: 100vw;
+    padding: 0;
+    width: 100vw;
   }
 }
